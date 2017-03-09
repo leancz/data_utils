@@ -1,5 +1,4 @@
 def dict_compare(d1, d2):
-    """ Compare two dictionaries and print the difference """
     stack = []
     stack.append(('', d1, d2))
     while len(stack)> 0:
@@ -12,5 +11,5 @@ def dict_compare(d1, d2):
                 print('Key difference at {}: {} != {}'.format(path, obj1.keys(), obj2.keys()))
             else:
                 for i in obj1.keys():
-                    stack.append((path + '/' + str(i), obj1[i], obj2[i]))
+                    stack.append((path + '[' + str(i) + ']', obj1[i], obj2[i]))
                     
